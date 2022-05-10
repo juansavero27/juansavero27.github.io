@@ -14,6 +14,9 @@
     <!-- Boostrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -76,10 +79,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
             <p>Information Systems is a field of science that studies how to create and operate software and hardware to interact with data. The information system also includes the collection, filtering, and distribution of data.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
             <p>
               Thanks to the knowledge of Information Systems that he learns, Information Systems graduates have the ability to design systems that are in accordance with the goals, needs, processes, and business of the company or client.
             </p>
@@ -108,7 +111,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="100" data-aos-duration="500">
               <img src="img/project/1.jpg" class="card-img-top" alt="Projects 1" />
               <div class="card-body">
                 <p class="card-text fw-bold text-center">FOOD</p>
@@ -116,7 +119,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="200" data-aos-duration="500">
               <img src="img/project/2.jpg" class="card-img-top" alt="Projects 2" />
               <div class="card-body">
                 <p class="card-text fw-bold text-center">DRINK</p>
@@ -124,7 +127,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="300" data-aos-duration="500">
               <img src="img/project/3.jpg" class="card-img-top" alt="Projects 3" />
               <div class="card-body">
                 <p class="card-text fw-bold text-center">HOBBY</p>
@@ -132,7 +135,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="400" data-aos-duration="500">
               <img src="img/project/4.jpg" class="card-img-top" alt="Projects 4" />
               <div class="card-body">
                 <p class="card-text fw-bold text-center">THE PLACES</p>
@@ -140,7 +143,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="500" data-aos-duration="500">
               <img src="img/project/5.jpg" class="card-img-top" alt="Projects 5" />
               <div class="card-body">
                 <p class="card-text fw-bold text-center">CLUB</p>
@@ -221,6 +224,20 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
  
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 2000,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+      gsap.from('.jumbotron img', {duration: 1,rotateY:360, opacity: 0, ease: 'bounce'});
+      gsap.form('.navbar', {duration: 1.5, y: '-100%', opacity: 0, ease:'bounce'});
+ 
+    </script>
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwQC_osoDp_cX1tbIe3FvhddxU6LpNsWiOkntC_KA7OshRm6Nu-AS_n1s1ilseiscg5fQ/exec'
       const form = document.forms['WPU-Contact-Form']
